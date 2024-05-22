@@ -5,6 +5,7 @@ import { Box, Flex, Grid } from "@radix-ui/themes";
 import EditIssueButton from "@/app/issues/[id]/EditIssueButton";
 import IssueDetails from "@/app/issues/[id]/IssueDetails";
 import DeleteIssueButton from "@/app/issues/[id]/DeleteIssueButton";
+import { Metadata } from "next";
 
 interface Props {
   params: { id: string };

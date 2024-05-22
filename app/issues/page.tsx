@@ -3,6 +3,7 @@ import { Table } from "@radix-ui/themes";
 import prisma from "@/prisma/client";
 import { IssueStatusBadge, Link } from "@/app/components";
 import IssueAction from "@/app/issues/IssueAction";
+import { Metadata } from "next";
 
 const IssuePage = async () => {
   const issues = await prisma.issue.findMany();
@@ -42,4 +43,8 @@ const IssuePage = async () => {
   );
 };
 
+export const metadata: Metadata = {
+  title: "Issue Tracker - Issue List",
+  description: "Issues list",
+};
 export default IssuePage;
